@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "C:/Users/shain/Documents/shaineoneal.github.io",
+	"sourceRoot": "C:/Users/shaine/Documents/Code Projects/shaineoneal.github.io",
 	"sources": [
 		"themes/hello-friend-ng/assets/scss/main.scss",
 		"themes/hello-friend-ng/assets/scss/_normalize.scss",
