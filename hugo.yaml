@@ -1,0 +1,14 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: My New Hugo Site
+
+module:
+  imports:
+    - path: github.com/rhazdon/hugo-theme-hello-friend-ng
+
+pagination:
+  pagerSize: 10
+
+params:
+  defaultTheme: auto
+  enableThemeToggle: true
