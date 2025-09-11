@@ -1,7 +1,7 @@
 ---
 title: "Archive of Our Own Archiver"
 date: 2024-07-01T10:15:12-04:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
@@ -9,6 +9,4 @@ tags:
 ---
 ## Introduction
 
-This is **bold** text, and this is *emphasized* text.
-
-Visit the [Hugo](https://gohugo.io) website!
+This is a placeholder, sorry!
