@@ -1,0 +1,68 @@
+{
+  "basics": {
+    "name": "Shaine O'Neal",
+    "label": "Research Data Specialist",
+    "email": "shaineoneal@gmail.com",
+    "phone": "(864) 556-6520",
+    "url": "https://shaine.io",
+    "summary": "Detail-oriented Research Data Specialist with nearly 2 years of experience in optimizing data collection and managing data operations. Proficient in Python, R, MySQL, and Tableau, I have streamlined processes by collaborating with engineers and developers, enhancing data integrity and efficiency. Notably, I developed a Chrome extension that improved user experience for a popular platform, showcasing my ability to merge technical skills with user-centric design.",
+    "location": {
+      "city": "Chicago",
+      "region": "IL",
+      "country": "USA"
+    }
+  },
+  "work": [{
+    "position": "Research Data Specialist",
+    "name": "GE Vernova (contracted through TEC Industrial)",
+    "location": "Greenville, SC",
+    "startDate": "2023-10-01",
+    "endDate": "2025-04-30",
+    "highlights": [
+      "Improved data system availability by ensuring the integrity and efficiency of back-end systems while managing end-to-end data operations for a testing facility.",
+      "Worked with test engineers and lab technicians to optimize data collection and minimize errors/gaps in test data.",
+      "Coordinated with software developers to optimize data collection processes and address bottlenecks."
+    ]
+  },
+  {
+    "position": "IT/AV Technician",
+    "name": "Clemson University",
+    "location": "Clemson, SC",
+    "startDate": "2022-05-01",
+    "endDate": "2023-05-01",
+    "highlights": [
+      "Conducted preventative maintenance and inspections on AV equipment to ensure optimal performance and reliability.",
+      "Provided technical support and troubleshooting for AV equipment in classrooms, conference rooms, and event spaces across campus."
+    ]
+  },
+  {
+    "position": "EMT Basic",
+    "name": "Spartanburg Regional Hospital",
+    "location": "Spartanburg, SC",
+    "startDate": "2020-09-01",
+    "endDate": "2022-01-31",
+    "highlights": [
+      "Provided emergency medical care and transportation for patients in pre-hospital settings.",
+      "Assisted in patient assessments, vital sign monitoring, and basic life support interventions.",
+      "Collaborated with healthcare teams to ensure continuity of care and effective communication."
+    ]
+  }],
+  "education": [{
+    "studyType": "Master of Science",
+    "area": "Data Analytics",
+    "institution": "Western Governors University",
+    "endDate": "2025-01-31"
+  },
+  {
+    "studyType": "Bachelor of Science",
+    "area": "Biology",
+    "institution": "Clemson University",
+    "endDate": "2023-05-01"
+  },
+  {
+    "studyType": "Bachelor of Science",
+    "area": "Psychology",
+    "institution": "Clemson University",
+    "endDate": "2022-05-01"
+  }]
+}

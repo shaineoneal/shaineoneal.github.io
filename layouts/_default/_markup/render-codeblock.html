@@ -1,0 +1,41 @@
+{{- .Page.Store.Set "hasM3Svgs" true -}}
+
+{{- $label := print .Type " code snippet" -}}
+{{- $preview := .Attributes.preview | default "false" -}}
+{{- $class := .Attributes.class -}}
+{{- $identifier := .Attributes.id -}}
+
+<figure
+    role="figure" 
+    aria-label="{{- $label | plainify -}}"
+    {{ if $identifier }} id={{ $identifier }} {{ end }} 
+    {{ if $class }} 
+        class="code-block {{ $class }}"
+        {{ end }} >
+    <div class="header">
+        {{- with .Attributes.title -}}
+        <figcaption class="title">
+            {{ . }}
+        </figcaption>
+        {{- end -}}
+
+        <div class="circles">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+        <div class="code-copy">
+            <button class="code-copy-button">Copy</button>
+            <textarea class="hidden">{{ .Inner }}</textarea>
+        </div>
+    </div>
+
+    {{- if $preview -}}
+        <div class="code-preview">
+            {{ .Inner | safeHTML }}
+        </div>
+    {{- end -}}
+
+    {{- highlight .Inner .Type .Options -}}
+  
+</figure>

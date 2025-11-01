@@ -1,0 +1,159 @@
+figure.window{
+    border: 2px solid var(--border-color);
+    display: block;
+    background-color: var(--code-bg);
+    border-radius: 10px;
+    box-shadow: 4px 4px var(--border-color);
+    
+    .header {
+        position: relative;
+        height: 40px;
+        border-bottom: 2px solid var(--border-color);
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        background-color: transparent;
+        justify-content: space-between;
+        grid-column: 1 / span 2;
+
+        &:not(:has(.title)) {
+            justify-content: flex-end;
+        }
+
+        figcaption {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin: 0;
+            display: flex;
+            
+        }
+
+        .circles {
+            display: flex;
+            gap: 8px;
+
+            .circle {
+                border: 2px solid var(--border-color);
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background-color: var(--code-bg);
+                box-shadow: 2px 2px var(--border-color);
+            }
+        }
+
+    }
+    .inner-window {
+        padding: 20px;
+    }
+    &.grid-layout {
+        .inner-window {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            align-items: center;
+            
+        }
+        &.shapes .inner-window svg {
+            will-change: filter, transform;
+
+            transform: translate(0, 0);
+            transition: transform 0.2s ease-in-out, filter 0.2s ease-out;
+            path {
+                fill: var(--accent-primary);
+
+            }
+            &:hover {
+                transform: translate(-3px, -3px);
+                filter: drop-shadow(4px 4px var(--border-color));
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: translate(0, 0);
+                filter: none;
+            }
+
+           
+        }
+        .notice-header {
+                grid-column: 1 / span 5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-out, color 0.2s ease-out;
+
+            input[type="checkbox"] {
+                appearance: none;
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                border: 2px solid var(--border-color);
+                border-radius: 5px;
+                background-color: var(--code-bg);
+                cursor: pointer;
+
+                &:not(:checked) {
+                    &:active {
+                        transform: translate(0, 0) !important;
+                        box-shadow: 1px 1px var(--border-color) !important;
+                    } 
+                    &:hover {
+                        transform: translate(-1px, -1px);
+                        box-shadow: 2px 2px var(--border-color);
+                    }
+
+                    .label {
+                        color: var(--border-color);
+                    }
+                    &+ label {
+                        color: #3e3e3e;
+                    }
+                }
+                
+
+                &:checked {
+                    background-color: var(--accent-primary);
+                    box-shadow: 2px 2px var(--border-color);
+                    transform: translate(-1px, -1px);
+                    &:active {
+                        transform: translate(1px, 1px) !important;
+                        box-shadow: 1px 1px var(--border-color) !important;
+                    } 
+                    &:hover {
+                        box-shadow: 2px 2px var(--border-color);
+                    }
+                    &::after {
+                        width: 6px;
+                        height: 12px;
+                        left: 5px;
+                        top: 1px;
+                        position: relative;
+                        border-width: 0 2.5px 2.5px 0;
+                        display: block;
+                        border-color: var(--border-color);
+                        border-style: solid;
+                        transform: rotate(45deg);
+                        content: "";
+                    }
+                    &+ label {
+                        color: var(--border-color);
+                    }
+                }
+                
+
+            }
+            .label:has(+ input[type="checkbox"]) {
+                color: blue;
+                &:checked {
+                    color: var(--text-primary);
+                }
+
+            }
+
+        }
+
+    }
+}

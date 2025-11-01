@@ -1,4 +1,13 @@
+
 <!DOCTYPE html>
+{{ with resources.Get "sass/main.scss" | toCSS (dict "targetPath" "css/main.css") }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+
+    {{- with resources.Get "js/m3-svgs.js" -}}
+        <script src="{{ .RelPermalink }}"></script>
+    {{- end -}}
+
 <html lang="{{ .Site.Language }}">
     <head>
         {{ partial "head.html" . }}
