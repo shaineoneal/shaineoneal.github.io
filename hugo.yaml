@@ -1,5 +1,5 @@
 baseurl: https://shaine.io/
-title: My Blog
+title: Under Construction
 languageCode: en-us
 
 
@@ -9,7 +9,7 @@ params:
   dateformNum: "2006-01-02"
   dateformNumTime: "2006-01-02 15:04"
   # Subtitle for home
-  homeSubtitle: "My landing page!"
+  homeSubtitle: "Ignore the mess, I'm trying."
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts: false
   # Enable sharing buttons, if you like
