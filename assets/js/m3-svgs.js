@@ -36,16 +36,25 @@
                     navigator.clipboard.writeText(svgCode);
                     showNotification('SVG code copied to clipboard!');
                 }
+                // get element id
+                const shape_id = this.classList[1]; // assuming the second class is the id
+                // Make element visible
+                const target = document.getElementById(shape_id);
+                if (target) {
+                    target.classList.remove('hidden');
+                }
+            } else {
+                // get element id
+                const shape_id = this.classList[1]; // assuming the second class is the id
+                // Make element visible
+                const target = document.getElementById(shape_id);
+                if (target) {
+                    target.classList.remove('hidden');
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
 
-            // get element id
-            const shape_id = this.classList[1]; // assuming the second class is the id
-            // Make element visible
-            const target = document.getElementById(shape_id);
-            if (target) {
-                target.classList.remove('hidden');
-                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            
         });
     });
 
