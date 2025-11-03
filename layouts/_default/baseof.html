@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-{{ with resources.Get "sass/main.scss" | toCSS (dict "targetPath" "css/main.css") }}
+{{ with resources.Get "sass/main.scss" | toCSS (dict "targetPath" "css/main.css") | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}
 
@@ -9,7 +9,7 @@
 {{- end -}}
 
 {{- with resources.Get "js/sw.js" -}}
-    <link rel="manifest" src="{{ .RelPermalink }}"></script>
+    <link rel="manifest" src="{{ .RelPermalink }}">
 {{- end -}}
 
 <html lang="{{ .Site.Language }}">
