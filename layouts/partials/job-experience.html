@@ -1,0 +1,20 @@
+
+<div class="job-exp">
+    <div class="flex flex-col">
+        <div class="flex flex-row">
+            <div class="job-exp__role">{{ .position }}</div>  
+            <div class="job-exp__duration">{{ .startDate | dateFormat "Jan 2006" }} - {{ .endDate | dateFormat "Jan 2006" }}</div>
+        </div>
+
+        <div class="flex flex-row">
+            <div class="job-exp__company">{{ .name }}</div>
+
+            <div class="job-exp__location">{{ .location }}</div>
+        </div>
+    </div>
+    <ul class="job-exp__highlights">
+        {{ range .highlights }}
+            <li class="job-exp__highlight">{{ . }}</li>
+        {{ end }}
+    </ul>
+</div>

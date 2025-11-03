@@ -1,0 +1,63 @@
+baseurl: localhost
+title: My Blog
+languageCode: en-us
+
+
+params:
+  dateform: "Jan 2, 2006"
+  dateformShort: "Jan 2"
+  dateformNum: "2006-01-02"
+  dateformNumTime: "2006-01-02 15:04"
+  # Subtitle for home
+  homeSubtitle: "My landing page!"
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts: false
+  # Enable sharing buttons, if you like
+  enableSharingButtons: true
+  # Show icon to toggle light/dark mode
+  enableThemeToggle: true
+  # Metadata mostly used in document's head
+  description: "My new homepage or blog"
+  keywords: "homepage, blog"
+  images: [""]
+  logo:
+    logoText: $ shaine://
+    logoHomeLink: /
+
+
+taxonomies:
+  category: blog
+  tag: tags
+  series: series
+
+menu:
+  main:
+    - identifier: posts
+      name: posts
+      url: /posts/
+    - identifier: projects
+      name: projects
+      url: /projects/
+
+pagination:
+  disableAliases: false
+  pagerSize: 2
+  path: page
+
+module:
+  imports:
+    - path: github.com/rhazdon/hugo-theme-hello-friend-ng
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+security:
+  enableInlineShortcodes: true
+
+permalinks:
+  styles: "/assets/css/common/:slug/"
+  scripts: "/assets/js/common/:slug/"
+
+

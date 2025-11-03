@@ -1,0 +1,176 @@
+.job-exp, .education-list {
+    margin-left: 0.25em;
+    padding-left: 0.75em;
+    border-left: 2px solid;
+
+}
+
+.job-exp .flex-row, .education-list .flex-row {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.job-exp .flex-col, .education-list .flex-col {
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+.job-exp__role, .education-list__degree {
+    font-weight: 750;
+    font-size: 1.1rem;
+    align-items: center;
+}
+
+.job-exp__location {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    align-items: center;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.job-exp__company, .education-item__school {
+    font-size: 0.9rem;
+    align-items: center;
+    font-style: italic;
+}
+
+.education-list {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+/* From Uiverse.io by 00Kubi */ 
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+[data-theme="dark"] .radio-inputs {
+  background-color: #1b1c1d;
+  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.06);
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .radio-inputs .radio input:checked + .name {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Hover effect */
+.radio-inputs .radio:hover .name {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Animation */
+.radio-inputs .radio input:checked + .name {
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: select 0.3s ease;
+}
+
+@keyframes select {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Particles */
+.radio-inputs .radio input:checked + .name::before,
+.radio-inputs .radio input:checked + .name::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3b82f6;
+  opacity: 0;
+  animation: particles 0.5s ease forwards;
+}
+
+.radio-inputs .radio input:checked + .name::before {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.radio-inputs .radio input:checked + .name::after {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes particles {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+    height: 0px;
+    width: 0px;
+  }
+  50% {
+    opacity: 1;
+    height: 10px;
+    width: 10px;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(var(--direction));
+    height: 0px;
+    width: 0px;
+  }
+}
+
+.radio-inputs .radio input:checked + .name::before {
+  --direction: -10px;
+}
+
+.radio-inputs .radio input:checked + .name::after {
+  --direction: 10px;
+}
+
+pre[class*=language-] {
+    border: none !important;
+}

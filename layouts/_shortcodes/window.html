@@ -1,0 +1,23 @@
+{{ $styles := resources.Get "sass/window.scss" | toCSS }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}">
+
+{{- .Page.Store.Set "hasM3Svgs" true -}}
+
+<figure class={{ if .Get "class" }}{{ .Get "class" }}{{ end }} role="figure">
+    <div class="header">
+        {{- with .Get "title" -}}
+        <figcaption class="title">
+            {{ . }}
+        </figcaption>
+        {{- end -}}
+
+        <div class="circles">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+    </div>
+    <div class="inner-window">
+        {{ .Inner }}
+    </div>
+</figure>

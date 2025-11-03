@@ -1,0 +1,11 @@
+{
+  "lang": "en",
+  "short_name": "My PWA",
+  "name": "My Super Duper Fancy PWA",
+  "description": "The description of My My Super Duper Fancy PWA",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}
