@@ -4,6 +4,11 @@ figure.window{
     background-color: var(--code-bg);
     border-radius: 10px;
     box-shadow: 4px 4px var(--border-color);
+    max-width: 1280px;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    height: fit-content;
     
     .header {
         position: relative;

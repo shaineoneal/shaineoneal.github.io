@@ -1,10 +1,20 @@
-:root {
+@import "window";
+
+:root[data-theme="dark"] {
     --text-primary: #ececec;
     --text-secondary: #404040;
     --border-color: #e1e1e1;
     --code-bg: #232425;
     --accent-primary: #61988E;
 }
+:root[data-theme="light"] {
+    --text-primary: #202020;
+    --text-secondary: #5a5a5a;
+    --border-color: #3e3e3e;
+    --code-bg: #f5f5f5;
+    --accent-primary: #61988E;
+}
+
 figure.code-block {
     border: 2px solid var(--border-color);
     width: 100%;
@@ -136,6 +146,32 @@ figure.code-block {
                 box-shadow: none;
                 transform: translateY(2px) translateX(2px);
             }
+        }
+    }
+
+}
+
+body {
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, grey 1px, transparent 1px),
+        linear-gradient(to bottom, grey 1px, transparent 1px);
+    main {
+        max-width: 1200px;
+        align-self: center;
+    }
+    header.header {
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        box-shadow: 4px 4px var(--border-color);
+        width: 100%;
+        max-width: 1280px;
+        align-self: center;
+        margin: 20px;
+
+        .header__inner {
+            width: 100%;
+            max-width: 1280px;
         }
     }
 
