@@ -1,7 +1,3 @@
-{{ $styles := resources.Get "sass/window.scss" | toCSS (dict "targetPath" "css/window.css") | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-
-
 <figure class={{ if .Get "class" }}{{ .Get "class" }}{{ end }} role="figure">
     <div class="header">
         {{- with .Get "title" -}}

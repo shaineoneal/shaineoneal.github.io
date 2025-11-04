@@ -27,6 +27,13 @@
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}
 
+{{ $customOpts := dict "transpiler" "libsass" "targetPath" "custom.css" "outputStyle" "compressed" "enableSourceMap" true }}
+{{ with resources.Get "scss/custom.scss" | toCSS $customOpts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+
+
+
 
 {{ range $val := $.Site.Params.customCSS }}
     {{ if gt (len $val) 0 }}
