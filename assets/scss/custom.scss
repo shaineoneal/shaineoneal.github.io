@@ -1,4 +1,6 @@
 @import "window";
+@import "fonts";
+@import "codeblock";
 
 :root[data-theme="dark"] {
     --text-primary: #ececec;
@@ -15,140 +17,38 @@
     --accent-primary: #61988E;
 }
 
-figure.code-block {
-    border: 2px solid var(--border-color);
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: var(--code-bg);
-    border-radius: 10px;
-    box-shadow: 4px 4px var(--border-color);
+.post, .posts {
+    max-width: 1000px;
 
-    &:has(.code-preview) {
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: auto auto;
-
-        .code-preview {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 20px;
+    .window__header {
+        height: 60px;
+        .post-title {
+            margin: 0;
+            font-size: 1.625rem;
         }
-        .highlight {
-            margin-left: 0;
+        
+    }
+    .window__inner {
+        .post-content {
+            margin-top: 0;
+            
+        }
+        h2 {
+            margin-top:0;
         }
     }
-    &.hidden {
+}
+
+@media (max-width: 684px) {
+    .theme-toggle {
         display: none;
     }
-    .header {
-        position: relative;
-        height: 40px;
-        border-bottom: 2px solid var(--border-color);
-        margin-bottom: 0px;
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        background-color: transparent;
-        justify-content: space-between;
-        grid-column: 1 / span 2;
-
-        &:not(:has(.title)) {
-            justify-content: flex-end;
-        }
-
-        figcaption {
-            font-family: 'Fira Code', monospace;
-            font-size: 14px;
-            color: var(--text-primary);
-            margin: 0;
-            display: flex;
-            
-        }
-
-        .circles {
-            display: flex;
-            gap: 8px;
-
-            .circle {
-                border: 2px solid var(--border-color);
-                border-radius: 50%;
-                width: 15px;
-                height: 15px;
-                box-shadow: 2px 2px var(--border-color);
-                background-color: var(--code-bg);
-            }
-        }
-
-        .code-copy {
-            display: none;
-            width: 61px;
-            height: 25px;
-            border: 2px solid var(--border-color);
-            border-radius: 20px;
-            box-shadow: 2px 2px var(--border-color);
-            background-color: var(--code-bg);
-            
-            .code-copy-button {
-                width: 100%;
-                height: 100%;
-                border: none;
-                background: none;
-                font-family: 'Fira Code', monospace;
-                font-size: 14px;
-                color: var(--text-primary);
-
-            }
-        }
+    .logo__custom {
+        display: none;
     }
-    .highlight {
-        margin: 20px;
-        overflow-x: auto;
-        
-        .code-toolbar {
-            margin: 0;
-            div.toolbar {
-                display: none;
-            }
-
-        }
-
-        pre[class*=language-] {
-            overflow-x: scroll;
-            border: 1.5px solid var(--border-color);
-            border-radius: 0px;
-            width: 100%;
-            box-shadow: none !important;
-        }
+    .post .window__header .post-title {
+        font-size: 1.25rem;
     }
-
-    &:hover {
-        .circles .circle {
-            display: none;
-        }
-        .code-copy {
-            display: block;
-
-            .code-copy-button {
-                cursor: pointer;
-                color: #a9a9b3;
-                font-size: 1rem;
-
-            }
-            &:hover {
-                background-color: var(--border-color);
-                .code-copy-button {
-                    color: var(--text-secondary);
-                }
-            }
-            &:active {
-                box-shadow: none;
-                transform: translateY(2px) translateX(2px);
-            }
-        }
-    }
-
 }
 
 body {
@@ -159,6 +59,9 @@ body {
     main {
         max-width: 1200px;
         align-self: center;
+        .window div.header {
+        background-color: transparent;
+    }
     }
     header.header {
         border: 1px solid var(--border-color);
@@ -175,4 +78,5 @@ body {
         }
     }
 
+    
 }
