@@ -8,7 +8,7 @@ tags:
   - untagged
 ---
 
-{{< window class="window grid-layout shapes">}}
+
 <!-- Row 1 -->
 <div class="shape shape-1">
   <svg width="100%" viewBox="0 0 320 320" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -241,7 +241,6 @@ tags:
     <label for="show-all-checkbox">Show All Previews</label>
   </div>
 </div>
-{{< /window >}}
 
 <!-- Row 1 -->
 ```html {style=nord preview=true class="hidden" id="shape-1"}

@@ -1,18 +1,7 @@
-:root {
-    --text-primary: #ececec;
-    --text-secondary: #404040;
-    --border-color: #e1e1e1;
-    --code-bg: #232425;
-    --accent-primary: #61988E;
-}
-figure.code-block {
+.highlight .code-toolbar pre {
     border: 2px solid var(--border-color);
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: var(--code-bg);
-    border-radius: 10px;
-    box-shadow: 4px 4px var(--border-color);
+    border-radius: 0px;
+    box-shadow: none;
 
     &:has(.code-preview) {
         display: grid;
