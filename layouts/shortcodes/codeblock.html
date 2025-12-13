@@ -1,25 +1,11 @@
-{{- .Page.Store.Set "hasM3Svgs" true -}}
+{{- $preview := .Get "preview" | default "false" -}}
+{{- $identifier := .Get "id" -}}
 
-{{- $label := print .Type " code snippet" -}}
-{{- $preview := .Attributes.preview | default "false" -}}
-{{- $class := .Attributes.class -}}
-{{- $identifier := .Attributes.id -}}
-
-<figure
-    role="figure" 
-    aria-label="{{- $label | plainify -}}"
+<div
     {{ if $identifier }} id={{ $identifier }} {{ end }} 
-    {{ if $class }} 
-        class="code-block {{ $class }}"
-        {{ end }} >
-    <div class="header">
-        {{- with .Attributes.title -}}
-        <figcaption class="title">
-            {{ . }}
-        </figcaption>
-        {{- end -}}
-
-        <div class="circles">
+        class="window code-block hidden">
+    <div class="window__header">
+        <div class="actions">
             <span class="circle"></span>
             <span class="circle"></span>
             <span class="circle"></span>
@@ -36,6 +22,7 @@
         </div>
     {{- end -}}
 
-    {{- highlight .Inner .Type .Options -}}
+    {{ $lang := "html" -}}
+    {{ transform.Highlight .Inner $lang  }}
   
-</figure>
+    </div>

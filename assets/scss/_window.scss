@@ -1,12 +1,13 @@
 .window {
     border: 2px solid var(--border-color);
     display: block;
-    background-color: var(--code-bg);
+    background-color: var(--background);
     border-radius: 10px;
     box-shadow: 4px 4px var(--border-color);
     max-width: 1280px;
-    width: 100%;
-    
+    width: auto;
+    margin: 10px;
+
     &__header {
         position: relative;
         height: 40px;
@@ -47,7 +48,7 @@
                 border-radius: 50%;
                 width: 15px;
                 height: 15px;
-                background-color: var(--code-bg);
+                background-color: var(--background);
                 box-shadow: 2px 2px var(--border-color);
             }
         }
@@ -57,14 +58,14 @@
         padding: 20px;
     }
     &.grid-layout {
-        .inner-window {
+        .window__inner {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             align-items: center;
             
         }
-        &.shapes .inner-window svg {
+        .shapes.window__inner svg {
             will-change: filter, transform;
 
             transform: translate(0, 0);
@@ -100,7 +101,7 @@
                 height: 20px;
                 border: 2px solid var(--border-color);
                 border-radius: 5px;
-                background-color: var(--code-bg);
+                background-color: var(--background);
                 cursor: pointer;
 
                 &:not(:checked) {

@@ -71,7 +71,7 @@ const showAllCheckbox = document.getElementById('show-all-checkbox');
 if (showAllCheckbox) {
     showAllCheckbox.addEventListener('change', function() {
         console.log('Show All Previews checkbox changed:', this.checked);
-        const previews = document.querySelectorAll('figure.code-block');
+        const previews = document.querySelectorAll('.code-block');
         if (this.checked) {
             previews.forEach(preview => preview.classList.remove('hidden'));
         } else {
