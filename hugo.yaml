@@ -13,7 +13,7 @@ params:
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts: false
   # Enable sharing buttons, if you like
-  enableSharingButtons: true
+  enableSharingButtons: false
   # Show icon to toggle light/dark mode
   enableThemeToggle: true
   # Metadata mostly used in document's head
