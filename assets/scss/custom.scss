@@ -2,6 +2,7 @@
 @import "window";
 @import "fonts";
 @import "codeblock";
+@import "pinned-posts";
 
 
 .post, .posts {
@@ -11,14 +12,13 @@
         height: 60px;
         .post-title {
             margin: 0;
-            font-size: 1.625rem;
         }
         
     }
     .window__inner {
         .post-content {
             margin-top: 0;
-            font-family: 'Lora', serif;
+            color: var(--text-secondary);
         }
         h2 {
             margin-top:0;
@@ -46,7 +46,8 @@ body {
     background-image:
         linear-gradient(to right, grey 1px, transparent 1px),
         linear-gradient(to bottom, grey 1px, transparent 1px);
-    font-family: 'Space Mono', monospace;
+    font-family: 'Space Grotesk', monospace;
+    color: var(--text-primary);
     main {
         max-width: 1200px;
         align-self: center;
@@ -66,8 +67,39 @@ body {
         .header__inner {
             width: 100%;
             max-width: calc(var(--content-width) + 40px);
+            color: var(--text-primary);
         }
     }
 
     
 }
+.hidden {
+    display: none !important;
+}
+/* Reset some default styles 
+    letter-spacing: .06em;
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
+    --phone-width: 684px;
+    --tablet-width: 900px;
+    --content-width: 1200px;
+    --background: #232425;
+    --background-secondary: #3b3d42;
+    --background-header: #1b1c1d;
+    --text-primary: #a9a9b3;
+    --text-variant: #white;
+    --text-secondary: #b3b3bd;
+    --border-color: #e1e1e1;
+    --accent-primary: #61988E;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga","tnum","case","calt","zero","ss01","locl";
+    -webkit-text-size-adjust: 100%;
+    font-size: 1rem;
+    font-family: space mono,monospace;
+    color: #a9a9b3;
+    text-align: left;
+    line-height: normal;
+    list-style: none;
+    box-sizing: inherit;
+    border-bottom: 1px grey dashed;*/
