@@ -1,0 +1,86 @@
+/* Reset some default styles 
+    letter-spacing: .06em;
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
+    --phone-width: 684px;
+    --tablet-width: 900px;
+    --content-width: 1200px;
+    --background: #232425;
+    --background-secondary: #3b3d42;
+    --background-header: #1b1c1d;
+    --text-primary: #a9a9b3;
+    --text-variant: #white;
+    --text-secondary: #b3b3bd;
+    --border-color: #e1e1e1;
+    --accent-primary: #61988E;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga","tnum","case","calt","zero","ss01","locl";
+    -webkit-text-size-adjust: 100%;
+    font-size: 1rem;
+    font-family: space mono,monospace;
+    color: #a9a9b3;
+    text-align: left;
+    line-height: normal;
+    list-style: none;
+    box-sizing: inherit;
+    border-bottom: 1px grey dashed;*/
+
+.posts-container {
+    border-top: 1px solid var(--border-color);
+    padding: 20px;
+
+    .pinned-title {
+        font-family: 'Space Mono', monospace;
+        font-size: 18px;
+        color: var(--text-primary);
+        margin: 0 0 10px 0;
+        padding-bottom: 10px;
+    }
+
+    .post-item {
+        border-top: 1px dashed var(--border-color);
+        list-style: none;
+
+        /*&::before {
+            content: "";
+            position: absolute; /* Position relative to the post item 
+            width: 20px; /* Size of the folded corner
+            height: 20px;
+            left: 10px;
+            background: #ccc;  Color of the folded corner 
+            transform: rotate(90deg); /* Rotates and slightly shifts it 
+            transform-origin: 100% 100%; /* Anchor for rotation 
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            border: 1px solid red;
+                        box-shadow: -0.2em 0.2em 0.3em rgba(0, 0, 0, 1);
+             Forms a triangle 
+
+            top: 0;
+            right: 0;
+            border-width: 0 1.5em 1.5em 0;
+            border-style: solid;
+            border-color: transparent var(--background) transparent transparent;
+
+        }*/
+
+        .post-item-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 12px 0;
+                text-decoration: none;
+
+            .post-title {
+                font-size: 1rem;
+                margin: 0 15px;
+            }
+            .post-day {
+                flex-shrink: 0;
+                margin-right: 1em;
+            }
+        }
+
+    }
+    
+}

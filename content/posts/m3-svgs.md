@@ -7,6 +7,8 @@ images:
 layout: "m3-svgs"
 tags:
   - untagged
+params:
+  pinned: true
 ---
 
 
