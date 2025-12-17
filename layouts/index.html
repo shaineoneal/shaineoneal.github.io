@@ -14,7 +14,15 @@
         {{ with .Site.Params.social }}
             {{ $social = printf "<div>%s</div>" (partial "social-icons.html" .) }}
         {{ end }}
-        {{ $content := printf "%s<div>%s%s%s%s</div>" $underConstruction $portrait $title $subtitle $social }}
+        {{ $pinnedPosts := where .Site.Pages "Params.pinned" true }}
+        {{ if gt (len $pinnedPosts) 0 }}
+            {{ $pinnedPosts = printf "<div class='posts-container'><h2 class='pinned-title'>📌 Pinned Articles</h2>%s</div>" (partial "post-group.html" $pinnedPosts) }}
+        {{ else }}
+            {{ $pinnedPosts = "" }}
+        {{ end }}
+        {{ $content := printf "%s<div>%s%s%s%s%s</div>" $underConstruction $portrait $title $subtitle $social $pinnedPosts}}
+        
         {{ partial "window.html" (dict "content" (safeHTML $content)) }}
+        
     </main>
 {{ end }}
