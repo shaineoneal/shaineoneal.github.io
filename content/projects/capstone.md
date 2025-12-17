@@ -6,6 +6,8 @@ toc: false
 images:
 tags:
 - untagged
+params:
+  pinned: true
 ---
 
 # 
