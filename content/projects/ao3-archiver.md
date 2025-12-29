@@ -128,5 +128,15 @@ MIT
 
 This project is not affiliated with the Organization for Transformative Works (OTW) or Archive of Our Own (AO3).
 
-> [!CAUTION]
-There are several issues/bugs with this version and it is not considered secure by Chrome standards. Use at your own risk.
+<blockquote class="alert alert-caution">
+    <div class="alert-shadow"></div>
+    <div class="alert-background"></div>
+    <div class="alert-container">
+        <div class="alert-heading">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' class='octagon'><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M252.6 64.1C235.6 64.1 219.3 70.8 207.3 82.8L83.2 207C71.2 219 64.5 235.2 64.5 252.2L64.5 387.8C64.5 404.8 71.2 421.1 83.2 433.1L207.4 557.2C219.4 569.2 235.7 575.9 252.7 575.9L388.3 575.9C405.3 575.9 421.6 569.2 433.6 557.2L557.6 433C569.6 421 576.3 404.7 576.3 387.7L576.3 252.1C576.3 235.1 569.6 218.8 557.6 206.8L433.5 82.8C421.5 70.8 405.2 64.1 388.2 64.1L252.6 64.1z'/></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' class='exclaim'><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M320 496C342.1 496 360 513.9 360 536C360 558.1 342.1 576 320 576C297.9 576 280 558.1 280 536C280 513.9 297.9 496 320 496zM320 64C346.5 64 368 85.5 368 112C368 112.6 368 113.1 368 113.7L352 417.7C351.1 434.7 337 448 320 448C303 448 289 434.7 288 417.7L272 113.7C272 113.1 272 112.6 272 112C272 85.5 293.5 64 320 64z'/></svg>
+        Caution</div>
+        <div class="alert-content">
+            There are several issues/bugs with this version and it is not considered secure by Chrome standards. Use at your own risk.
+        </div>
+    </div>
+</blockquote>
