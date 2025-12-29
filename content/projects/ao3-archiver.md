@@ -129,4 +129,4 @@ MIT
 This project is not affiliated with the Organization for Transformative Works (OTW) or Archive of Our Own (AO3).
 
 > [!CAUTION]
-> There are several issues/bugs with this version and it is not considered secure by Chrome standards. Use at your own risk.
+There are several issues/bugs with this version and it is not considered secure by Chrome standards. Use at your own risk.
