@@ -1,9 +1,5 @@
 {{ define "main" }}
 
-    {{ $css := resources.Get "css/common/main.css" | resources.Minify | resources.Fingerprint}}
-
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" type="text/css" media="screen" integrity="{{ $css.Data.Integrity }}">
-
     <main class="post">
 
         <div class="post-info">
