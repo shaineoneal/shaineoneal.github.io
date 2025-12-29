@@ -3,6 +3,8 @@
 @import "fonts";
 @import "codeblock";
 @import "pinned-posts";
+@import "git-commits";
+@import "blockquote";
 
 
 .post, .posts {
@@ -16,6 +18,13 @@
         
     }
     .window__inner {
+        article {
+            display: flex;
+
+            &:has(.github-commits-container) {
+                justify-content: space-between;
+            }
+        }
         .post-content {
             margin-top: 0;
             color: var(--text-secondary);
@@ -103,3 +112,35 @@ body {
     list-style: none;
     box-sizing: inherit;
     border-bottom: 1px grey dashed;*/
+
+
+details {
+    summary {
+        margin-block: 1em;;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &[open] {
+        
+        > :not(summary) {
+            padding-left: 15px;
+            padding-right: 20px;
+            margin-left: 5px;
+            border-left: 1.5px solid var(--text-tertiary);
+        }
+    }
+}
+
+div.highlight {
+
+    pre {
+        border: 1.5px solid var(--border-color);
+        border-radius: 3px;
+        box-shadow: none !important;
+    }
+
+    .toolbar {
+        right: 0.5em;
+    }
+}

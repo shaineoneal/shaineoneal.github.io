@@ -1,0 +1,48 @@
+
+.github-commits-container {
+        width: 40%;
+        padding: 1rem;
+        margin-left: 1rem;
+        border: 1px solid var(--border-color, #ccc);
+        border-radius: 5px;
+        background-color: var(--background-secondary, transparent);
+    }
+    .github-commits-container h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    #github-commits-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    #github-commits-list li {
+        margin-bottom: 1rem;
+        border-bottom: 1px dashed var(--border-color, #eee);
+        padding-bottom: 1rem;
+    }
+    #github-commits-list li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .commit-meta {
+        font-size: 0.85em;
+        color: var(--text-secondary, #666);
+        margin-bottom: 0.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .branch-name strong {
+        color: var(--accent-primary, #007bff);
+    }
+    .commit-message {
+        display: block;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--text-primary, inherit);
+    }
+    .commit-message:hover {
+        text-decoration: underline;
+    }

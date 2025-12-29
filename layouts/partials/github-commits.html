@@ -1,0 +1,80 @@
+{{ if .Params.github_repo }}
+<div class="github-commits-container">
+    <h3>Recent Activity</h3>
+    <ul id="github-commits-list">
+        <li>Loading activity...</li>
+    </ul>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const repo = "{{ .Params.github_repo }}";
+        const container = document.getElementById("github-commits-list");
+        
+        Promise.all([
+            fetch(`https://api.github.com/repos/${repo}/events?per_page=20`).then(response => {
+                if (!response.ok) throw new Error('Events response was not ok');
+                return response.json();
+            }),
+            fetch(`https://api.github.com/repos/${repo}/commits?per_page=20`).then(response => {
+                if (!response.ok) throw new Error('Commits response was not ok');
+                return response.json();
+            })
+        ])
+        .then(([events, commits]) => {
+            container.innerHTML = '';
+            
+            // Create a map of commits by SHA for easy lookup
+            const commitMap = {};
+            if (Array.isArray(commits)) {
+                commits.forEach(c => {
+                    commitMap[c.sha] = c;
+                });
+            }
+
+            // Filter for PushEvents
+            const pushEvents = events.filter(event => event.type === 'PushEvent').slice(0, 5);
+            
+            if (pushEvents.length === 0) {
+                container.innerHTML = '<li>No recent push activity found.</li>';
+                return;
+            }
+
+            pushEvents.forEach(event => {
+                const li = document.createElement('li');
+                const branch = event.payload.ref.replace('refs/heads/', '');
+                const date = new Date(event.created_at).toLocaleDateString();
+                const sha = event.payload.head;
+                
+                let message = "Update to " + branch;
+                let url = `https://github.com/${repo}/commit/${sha}`;
+                
+                // Try to find message in event payload first
+                if (event.payload.commits && event.payload.commits.length > 0) {
+                    const commit = event.payload.commits[event.payload.commits.length - 1];
+                    message = commit.message.split('\n')[0];
+                } 
+                // Fallback to looking up in commits list
+                else if (commitMap[sha]) {
+                    message = commitMap[sha].commit.message.split('\n')[0];
+                    url = commitMap[sha].html_url;
+                }
+                
+                li.innerHTML = `
+                    <div class="commit-meta">
+                        <span class="branch-name">Branch: <strong>${branch}</strong></span>
+                        <span class="commit-date">${date}</span>
+                    </div>
+                    <a href="${url}" target="_blank" rel="noopener" class="commit-message">${message}</a>
+                `;
+                container.appendChild(li);
+            });
+        })
+        .catch(error => {
+            container.innerHTML = '<li>Error loading activity.</li>';
+            console.error('Error fetching activity:', error);
+        });
+    });
+</script>
+
+{{ end }}
