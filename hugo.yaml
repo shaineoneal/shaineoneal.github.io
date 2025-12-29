@@ -23,7 +23,15 @@ params:
   logo:
     logoText: $ shaine://
     logoHomeLink: /
-
+  social:
+    - name: "discord"
+      url: "https://discord.com/users/517044588104515584/"
+    - name: "github"
+      url: "https://github.com/shaineoneal/"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/shaineoneal/"
+    - name: "email"
+      url: "mailto:shaineoneal@gmail.com"
 
 taxonomies:
   category: blog

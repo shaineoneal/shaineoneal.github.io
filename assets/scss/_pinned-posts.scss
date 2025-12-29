@@ -27,8 +27,9 @@
     border-bottom: 1px grey dashed;*/
 
 .posts-container {
-    border-top: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
     padding: 20px;
+    padding-bottom: 8px;
 
     .pinned-title {
         font-family: 'Space Mono', monospace;

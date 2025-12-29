@@ -12,7 +12,7 @@
         {{ end }}
         {{ $social := "" }}
         {{ with .Site.Params.social }}
-            {{ $social = printf "<div>%s</div>" (partial "social-icons.html" .) }}
+            {{ $social = printf "<div class='social-icons'>%s</div>" (partial "social-icons.html" .) }}
         {{ end }}
         {{ $pinnedPosts := where .Site.Pages "Params.pinned" true }}
         {{ if gt (len $pinnedPosts) 0 }}
@@ -20,7 +20,7 @@
         {{ else }}
             {{ $pinnedPosts = "" }}
         {{ end }}
-        {{ $content := printf "%s<div>%s%s%s%s%s</div>" $underConstruction $portrait $title $subtitle $social $pinnedPosts}}
+        {{ $content := printf "%s<div>%s%s%s%s%s</div>" $pinnedPosts $underConstruction $portrait $title $subtitle $social}}
         
         {{ partial "window.html" (dict "content" (safeHTML $content)) }}
         

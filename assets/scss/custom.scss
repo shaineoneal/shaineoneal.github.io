@@ -18,6 +18,7 @@
         
     }
     .window__inner {
+        padding: 20px;
         article {
             display: flex;
 
@@ -142,4 +143,22 @@ div.highlight {
     .toolbar {
         right: 0.5em;
     }
+}
+
+div.social-icons {
+    border-top: 2px solid var(--border-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+    a {
+        display: flex;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.logo__cursor {
+    background: var(--accent-primary);
 }
