@@ -162,3 +162,51 @@ div.social-icons {
 .logo__cursor {
     background: var(--accent-primary);
 }
+
+.job-exp, .education-list, .projects-list, .skills-list {
+    margin-left: 0.25em;
+    padding-left: 0.75em;
+    border-left: 2px solid var(--background-tertiary);
+
+}
+
+.job-exp .flex-row, .education-list .flex-row, .projects-list .flex-row {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.job-exp .flex-col, .education-list .flex-col, .projects-list .flex-col {
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+.job-exp__role, .education-list__degree, .projects-list__name {
+    font-weight: 750;
+    font-size: 1.1rem;
+    align-items: center;
+}
+
+.job-exp__location {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    align-items: center;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.job-exp__company, .education-item__school {
+    font-size: 0.9rem;
+    align-items: center;
+    font-style: italic;
+}
+
+.education-list, .projects-list {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}

@@ -4,12 +4,9 @@ date: 2024-07-01T10:15:12-04:00
 draft: false
 toc: false
 images:
-tags:
-  - untagged
 params:
   pinned: true
 ---
-# AO3 Archiver
 
 A browser extension that allows you to archive works from [Archive of Our Own (AO3)](https://archiveofourown.org/) directly to a Google Sheet. This project was inspired by [AO3 Enhancements](https://github.com/jsmnbom/ao3-enhancements) and [AO3: Kudosed and seen history](https://greasyfork.org/en/scripts/5835-ao3-kudosed-and-seen-history).
 

@@ -40,12 +40,16 @@ taxonomies:
 
 menu:
   main:
+    - identifier: resume
+      name: resume
+      url: /resume/
     - identifier: posts
       name: posts
       url: /posts/
     - identifier: projects
       name: projects
       url: /projects/
+
 
 pagination:
   disableAliases: false

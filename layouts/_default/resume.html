@@ -1,0 +1,77 @@
+{{ define "main" }}.
+
+<main class="post">
+    <div class="window">
+        <div class="window__header">
+            <div class="header__inner">
+                <h2 class="post-title"><a href="{{ .Permalink }}"></a>{{ .Title }}</h2>
+                <div class="actions">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </div>
+        <div class="window__inner">
+            <article>
+                <h1 class="hidden">
+                  <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                </h1>
+            
+
+                <div class="post-content">
+                    {{ $resume := site.Data.resume }}
+                    <h2>Professional Summary</h2>
+                    <p>{{ $resume.basics.summary }}</p>
+                    
+                    <h2>Education</h2>
+                    {{ range $resume.education }}
+                        {{ partial "education.html" . }}
+                    {{ end }}
+
+                    <h2>Work Experience</h2>
+                    {{ range $resume.work }}
+                        {{ partial "job-experience.html" . }}
+                    {{ end }}
+
+                     <h2>Projects</h2>
+                    {{ range $resume.projects }}
+                    <li class="projects-list">
+                        <div class="flex flex-col">
+                            <div class="flex flex-row">
+                                <div class="projects-list__name">{{.name }}</div>  
+                                <div class="projects-list__date">{{ .startDate | time | dateFormat "Jan 2006" }} - {{ if eq .endDate "present" }}Present{{ else }}{{ .endDate | time | dateFormat "Jan 2006" }}{{ end }}</div>
+                            </div>
+                            <div class="projects-item__highlights">
+                                <ul>
+                                    {{ range .highlights }}
+                                        <li class="projects-item__highlight">{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                                </div>
+                        </div>
+                    </li>
+                    {{ end }}
+                    <h2>Skills</h2>
+                    <ul class="skills-list">
+                        <ul>
+                            <li>
+                                <p><strong>Data Analytics:</strong> Tableau, MySQL, Natural Language Processing (NLP), Tensorflow, R, Power BI, Pytorch, Python NLTK, Pandas, Keras</p>
+                            </li>
+                            <li>
+                                <p><strong>Development:</strong> Python, Java, JavaScript, TypeScript, Git, C/C++, jQuery, Jupyter, Linux/Unix, Usability Testing/Engineering, Node.js, Java, HTML, HTML/CSS, React.js, SQL, Vue.js, Webpack</p>
+                            </li>
+                            <li>
+                                <p><strong>Technologies:</strong> Google Analytics, AutoCAD, Excel/Numbers/Sheets, Quickbooks, Docker, Figma, Google Cloud Platform, PowerShell, PowerPoint/Keynote/Slides</p>
+                            </li>
+                        </ul>
+                        
+                
+                                        
+                  {{ .Content }}
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+{{ end }}

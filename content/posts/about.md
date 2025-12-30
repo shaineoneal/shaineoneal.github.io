@@ -8,9 +8,9 @@ tags:
   - untagged
 ---
 
-Hi, I’m **Shaine O’Neal**. I’m a data analytics professional and developer based in Chicago. I moved here from Anderson, South Carolina in May 2025 and I’m still pretty excited about it. I like working in the space where data, technology, and people overlap, especially when that means taking something messy or confusing and turning it into something clear and usable.
+Hi, I’m **Shaine O’Neal**. I’m a data analytics professional and developer based in Chicago. I moved here from Anderson, South Carolina in May 2025 and I’m still pretty excited about it. I like working in the space where data, technology, and people overlap, especially when that means taking something confusing and turning it into something people can understand.
 
-Prior to moving, I worked as a Research Data Specialist, collaborating closely with engineers, lab technicians, and developers to improve how data is collected, validated, and used. I work my best when  ownership of a dataset or system: understanding how it works, where it breaks, and how to turn it into something clear, accurate, and useful. There’s something deeply satisfying about transforming raw data into clean, intuitive, and even beautiful visualizationss
+Prior to moving, I worked as a Research Data Specialist, collaborating closely with engineers, lab technicians, and developers to improve how data is collected, validated, and used. I work my best when I have ownership of a dataset or system: understanding how it works, where it breaks, and how to turn it into something clear, accurate, and useful. There’s something deeply satisfying about transforming raw data into clean, intuitive, and even beautiful visualizationss
 
 My background is a mix of data analytics, biology, and psychology, which probably explains a lot about how I approach problems. I’m curious about how people think, how systems behave, and what happens when the two don’t line up. In a perfect world, I’d be studying computational neuropsychology, but instead I’ve built a career around learning by doing and picking up new skills as I need them.
 

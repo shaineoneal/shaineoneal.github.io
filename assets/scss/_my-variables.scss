@@ -8,6 +8,7 @@
 :root[data-theme="dark"] {
     --background: #232425;
     --background-secondary: #3b3d42;
+    --background-tertiary: #4e4e57;
     --background-header: #1b1c1d;
     --text-primary: #D4D4D9;
     --text-variant: #white;
@@ -20,6 +21,7 @@
 :root[data-theme="light"] {
     --background: #fff;
     --background-secondary: #eaeaea;
+    --background-tertiary: #dcdcdc;
     --background-header: #fafafa;
     --text-primary: #222;
     --text-variant: black;
