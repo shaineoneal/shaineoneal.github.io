@@ -8,7 +8,9 @@ tags:
   - untagged
 ---
 
-Hi, I’m **Shaine O’Neal**. I’m a data analytics professional and developer based in Chicago. I moved here from Anderson, South Carolina in May 2025 and I’m still pretty excited about it. I like working in the space where data, technology, and people overlap, especially when that means taking something confusing and turning it into something people can understand.
+Hi, I’m **Shaine O’Neal**. I’m a data analytics professional and developer based in Chicago. 
+
+I moved here from Anderson, South Carolina in May 2025 and I’m still pretty excited about it. I try to work in the space where data, technology, and people meet. I love being able to take something confusing and turning it into something people can understand.
 
 Prior to moving, I worked as a Research Data Specialist, collaborating closely with engineers, lab technicians, and developers to improve how data is collected, validated, and used. I work my best when I have ownership of a dataset or system: understanding how it works, where it breaks, and how to turn it into something clear, accurate, and useful. There’s something deeply satisfying about transforming raw data into clean, intuitive, and even beautiful visualizationss
 

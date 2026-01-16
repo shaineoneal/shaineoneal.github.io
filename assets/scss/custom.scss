@@ -5,6 +5,7 @@
 @import "pinned-posts";
 @import "git-commits";
 @import "blockquote";
+@import "laptop";
 
 
 .post, .posts {
@@ -149,6 +150,7 @@ div.social-icons {
     border-top: 2px solid var(--border-color);
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 
@@ -157,6 +159,7 @@ div.social-icons {
         padding-left: 5px;
         padding-right: 5px;
     }
+
 }
 
 .logo__cursor {

@@ -33,6 +33,7 @@ params:
     - name: "email"
       url: "mailto:shaineoneal@gmail.com"
 
+
 taxonomies:
   category: blog
   tag: tags

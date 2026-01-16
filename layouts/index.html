@@ -1,26 +1,31 @@
 {{ define "main" }}
     <main>
-        {{ $underConstruction := partial "under-construction.html" . }}
         {{ $portrait := "" }}
         {{ if .Site.Params.Portrait.Path }}
             {{ $portrait = printf "<img src='%s' class='circle' alt='%s' style='max-width:%s' />" .Site.Params.Portrait.Path .Site.Params.Portrait.Alt .Site.Params.Portrait.MaxWidth }}
         {{ end }}
+
         {{ $title := printf "<h1>%s</h1>" .Site.Title }}
+
         {{ $subtitle := "" }}
         {{ with .Site.Params.homeSubtitle }}
             {{ $subtitle = printf "<p>%s</p>" . }}
         {{ end }}
+
         {{ $social := "" }}
         {{ with .Site.Params.social }}
             {{ $social = printf "<div class='social-icons'>%s</div>" (partial "social-icons.html" .) }}
         {{ end }}
+
+        {{ $laptop := partial "laptop.html" . }}
+
         {{ $pinnedPosts := where .Site.Pages "Params.pinned" true }}
         {{ if gt (len $pinnedPosts) 0 }}
             {{ $pinnedPosts = printf "<div class='posts-container'><h2 class='pinned-title'>📌 Pinned Articles</h2>%s</div>" (partial "post-group.html" $pinnedPosts) }}
         {{ else }}
             {{ $pinnedPosts = "" }}
         {{ end }}
-        {{ $content := printf "%s<div>%s%s%s%s%s</div>" $pinnedPosts $underConstruction $portrait $title $subtitle $social}}
+        {{ $content := printf "%s%s<div>%s%s%s%s</div>" $pinnedPosts $laptop $portrait $title $subtitle $social}}
         
         {{ partial "window.html" (dict "content" (safeHTML $content)) }}
         

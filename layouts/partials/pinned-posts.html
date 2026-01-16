@@ -1,0 +1,13 @@
+{{ $pages := where .Site.RegularPages "Params.pinned" true }}
+{{/* Sort by weight if set, otherwise by date */}}
+{{ $pages = sort $pages "Params.weight" "asc" "Date" "desc" }}
+{{ if gt (len $pages) 0 }}
+    <div class="posts-container">
+        <h2 class="pinned-title">📌 Pinned Articles</h2>
+        <ul class="post-list">
+            {{ range $pages }}
+                {{ partial "post-entry.html" . }}
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}

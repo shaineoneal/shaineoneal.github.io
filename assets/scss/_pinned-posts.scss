@@ -75,6 +75,8 @@
             .post-title {
                 font-size: 1rem;
                 margin: 0 15px;
+                width: max-content;
+                text-align: left;
             }
             .post-day {
                 flex-shrink: 0;

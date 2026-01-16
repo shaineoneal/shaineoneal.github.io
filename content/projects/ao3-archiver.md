@@ -4,6 +4,7 @@ date: 2024-07-01T10:15:12-04:00
 draft: false
 toc: false
 images:
+weight: 10
 params:
   pinned: true
 ---
