@@ -5,7 +5,7 @@
     "email": "shaineoneal@gmail.com",
     "phone": "(864) 556-6520",
     "url": "https://shaine.io",
-    "summary": "Detail-oriented Research Data Specialist with nearly 2 years of experience in optimizing data collection and managing data operations. Proficient in Python, R, MySQL, and Tableau, I have streamlined processes by collaborating with engineers and developers, enhancing data integrity and efficiency. Notably, I developed a Chrome extension that improved user experience for a popular platform, showcasing my ability to merge technical skills with user-centric design.",
+    "summary": "Research Data Specialist with two years of experience supporting large-scale data operations and improving data reliability across technical environments. Proficient in Python, SQL, R, and Tableau, with a focus keeping data accurate, usable, and well-documented. Comfortable working with both engineers and non-technical teams and experienced in building internal tools to make data more accessible.",
     "location": {
       "city": "Chicago",
       "region": "IL",
@@ -13,15 +13,28 @@
     }
   },
   "work": [{
+    "position": "Associate Operations Analyst",
+    "name": "Rudolph M O'Neal CPA",
+    "location": "Remote",
+    "startDate": "2025-04-01",
+    "endDate": "2025-09-30",
+    "highlights": [
+      "Performed routine reconciliations to verify data accuracy and identify discrepancies between records.",
+      "Supported operational data workflows including transaction tracking and validation across internal systems.",
+      "Maintained structured documentation to support auditability and downstream reporting."
+    ]
+  },
+    {
     "position": "Research Data Specialist",
     "name": "GE Vernova (contracted through TEC Industrial)",
     "location": "Greenville, SC",
     "startDate": "2023-10-01",
     "endDate": "2025-04-30",
     "highlights": [
-      "Improved data system availability by ensuring the integrity and efficiency of back-end systems while managing end-to-end data operations for a testing facility.",
-      "Worked with test engineers and lab technicians to optimize data collection and minimize errors/gaps in test data.",
-      "Coordinated with software developers to optimize data collection processes and address bottlenecks."
+      "Supported day-to-day data operations for a testing facility, ensuring data were collected, stored, and accessible to teams.",
+      "Worked closely with test engineers and lab technicians to catch gaps or errors in test data early.",
+      "Coordinated with developers to improve data collection workflows and reduce recurring issues.",
+      "Monitored backend systems and data pipelines to help maintain reliability and minimize downtime."
     ]
   },
   {
@@ -31,20 +44,11 @@
     "startDate": "2022-05-01",
     "endDate": "2023-05-01",
     "highlights": [
-      "Conducted preventative maintenance and inspections on AV equipment to ensure optimal performance and reliability.",
-      "Provided technical support and troubleshooting for AV equipment in classrooms, conference rooms, and event spaces across campus."
-    ]
-  },
-  {
-    "position": "EMT Basic",
-    "name": "Spartanburg Regional Hospital",
-    "location": "Spartanburg, SC",
-    "startDate": "2020-09-01",
-    "endDate": "2022-01-31",
-    "highlights": [
-      "Provided emergency medical care and transportation for patients in pre-hospital settings.",
-      "Assisted in patient assessments, vital sign monitoring, and basic life support interventions.",
-      "Collaborated with healthcare teams to ensure continuity of care and effective communication."
+      "Provided technical support for classrooms, labs, and events, troubleshooting hardware and software issues in real time.",
+      "Performed routine system checks and preventative maintenance to reduce recurring technical problems.",
+      "Assisted faculty and staff with setup and configuration of AV and computing equipment.",
+      "Documented common issues and fixes to speed up future troubleshooting.",
+      "Contributed to process improvements that made test data easier to analyze downstream."
     ]
   }],
   "education": [{

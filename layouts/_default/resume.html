@@ -19,7 +19,7 @@
                 </h1>
             
 
-                <div class="post-content">
+                <div class="post-content resume-content">
                     {{ $resume := site.Data.resume }}
                     <h2>Professional Summary</h2>
                     <p>{{ $resume.basics.summary }}</p>
@@ -53,7 +53,7 @@
                     </li>
                     {{ end }}
                     <h2>Skills</h2>
-                    <ul class="skills-list">
+                    <div class="skills-list">
                         <ul>
                             <li>
                                 <p><strong>Data Analytics:</strong> Tableau, MySQL, Natural Language Processing (NLP), Tensorflow, R, Power BI, Pytorch, Python NLTK, Pandas, Keras</p>
