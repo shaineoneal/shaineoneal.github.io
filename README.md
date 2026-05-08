@@ -1,5 +1,5 @@
-# shaineoneal.github.io
+My personal website, built with Hugo and SCSS.
 
-My personal website, built with Hugo.
+Theme originally built from [hello-friend-ng](https://github.com/rhazdon/hugo-theme-hello-friend-ng)
 
 Live: https://shaine.io/
