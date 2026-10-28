@@ -23,7 +23,7 @@ The thought behind all of this was "What if I could, instead of using cache or l
 ## Demo
 
 <video controls height="600">
-  <source src="https://github.com/user-attachments/assets/e9a497f1-9329-45ce-a8bd-43920f698b5e/"type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/e9a497f1-9329-45ce-a8bd-43920f698b5e/" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -128,7 +128,6 @@ MIT
 This project is not affiliated with the Organization for Transformative Works (OTW) or Archive of Our Own (AO3).
 
 <blockquote class="alert alert-caution">
-    <div class="alert-shadow"></div>
     <div class="alert-background"></div>
     <div class="alert-container">
         <div class="alert-heading">
